@@ -3,6 +3,10 @@
 EXT=".php"
 DIRNAME=$(dirname $0)
 
+# credit: [How to get the source directory of a Bash script from within the script itself? - Stack Overflow](https://stackoverflow.com/questions/59895/how-to-get-the-source-directory-of-a-bash-script-from-within-the-script-itself)
+DIR="/Users/santosh/Dropbox/pandora/My-Projects/repos/get-shit-done"
+echo $DIR
+
 if [ `whoami` != "root" ]
 then
     # echo "Performing sudo - I need root to edit your hosts file."
@@ -11,4 +15,5 @@ then
     exit $?
 fi
 
-$DIRNAME/get-shit-done$EXT $*
+# $DIRNAME/get-shit-done$EXT $*
+$DIR/get-shit-done$EXT $*
